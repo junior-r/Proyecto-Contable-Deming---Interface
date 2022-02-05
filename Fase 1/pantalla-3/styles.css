@@ -103,8 +103,13 @@ body {
   position: relative;
 }
 
-.header .nav .menu li ul li ul {
+.header .nav .menu li:not(:last-child) ul li ul {
   left: var(--width-100);
+  top: calc(0% - 1.5rem);
+}
+
+.header .nav .menu li:last-child ul li ul {
+  right: var(--width-100);
   top: calc(0% - 1.5rem);
 }
 
