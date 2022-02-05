@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --family-titulos: 'Open Sans', sans-serif;
+  --family-parrafos: 'Roboto', sans-serif;
+
+  --header-height: 60px;
+
+  --width-100: 100%;
+}
+
+.danger {
+  color: #f00;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.header {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  height: var(--header-height);
+  position: relative;
+  z-index: 100;
+}
+
+.header .logo-header {
+  width: 13rem;
+  margin-right: 4.9rem;
+}
+
+.header .nav {
+  width: 100%;
+}
+
+.header .nav .menu {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  height: 100%;
+  margin-top: 0.8rem;
+}
+
+.header .nav .menu .item {
+  font-family: var(--family-titulos);
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: var(--width-100);
+  height: calc(100% - 0.3rem);
+}
+
+.header .nav .menu li ul {
+  display: none;
+  list-style: none;
+  color: #000;
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  background-color: rgb(255, 248, 239);
+  border-radius: 0 5px 5px 5px;
+  /* box-shadow: 2px 2px 5px #333; */
+  list-style-position: inside;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 1rem;
+}
+
+.header .nav .menu li:hover > ul {
+  display: block;
+}
+
+.header .nav .menu li:hover {
+  background-color: rgb(255, 248, 239);
+}
+
+.header .nav .menu li ul li {
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.header .nav .menu li ul li ul {
+  left: var(--width-100);
+  top: calc(0% - 1.5rem);
+}
+
+.header .nav .menu li ul li:hover:not(.danger) {
+  color: #00f;
+  background-color: #eee;
+}
+
+.content {
+  background-image: url(../../img/logo-deming-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  gap: 2rem;
+}
+
+.content .sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .sidebar .container-menu {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.content .sidebar .container-menu .name-project {
+  font-family: var(--family-titulos);
+  margin-bottom: 1rem;
+}
+
+.content .sidebar .container-menu .menu-sidebar {
+  list-style: none;
+}
+
+.content .sidebar .container-menu .menu-sidebar li {
+  padding: 0.5rem 2rem;
+  transition: all .3s;
+  height: 100%;
+  cursor: pointer;
+}
+
+.content .sidebar .container-menu .menu-sidebar li:hover:not(.items-6) {
+  background-color: #eee;
+  color: #00f;
+}
+
+.content .sidebar .container-menu .menu-sidebar .item,
+.content .user-information .user {
+  font-family: var(--family-parrafos);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.content .user-information {
+  padding: 0 0 0.5rem 1rem;
+}
+
+.content .user-information .user {
+  color: #00f;
+  font-weight: 700;
+}
+
+.content .work-space {
+  flex: 1;
+  background-color: rgba(238, 238, 238, 0.9);
+  padding: 1rem;
+  font-family: var(--family-parrafos);
+}
