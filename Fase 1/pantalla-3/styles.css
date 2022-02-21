@@ -74,6 +74,10 @@ body {
   height: calc(100% - 0.3rem);
 }
 
+.header .nav .menu > li {
+  text-align: center;
+}
+
 .header .nav .menu li ul {
   display: none;
   list-style: none;
@@ -101,6 +105,7 @@ body {
 .header .nav .menu li ul li {
   padding-bottom: 1rem;
   position: relative;
+  text-align: start;
 }
 
 .header .nav .menu li:not(:last-child) ul li ul {
